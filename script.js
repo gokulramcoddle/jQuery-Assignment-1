@@ -32,6 +32,7 @@ $("#ocbtn").mouseenter(()=>{
     $("h2").text("jQuery Assignment-1");
  })
 
+ //input type selector
 //change event
  $("input[type='checkbox']").change(()=>{
     if($("input[type='checkbox']").is(":checked")){
@@ -41,6 +42,15 @@ $("#ocbtn").mouseenter(()=>{
         alert("Do you want to Uncheck?")
     }
  })
+
+ //append
+$("#addbtn").click(()=>{
+    let val=$(".additem input").val();
+  if(val.trim()!== ""){
+   let listdiv=$("<div>").text(val).css({"margin":"5px 0px","padding":"10px","border":"solid 1px black","height":"30px","width":"300px"});
+  $(".todolist").append(listdiv);
+  }
+});
 
 });
 
